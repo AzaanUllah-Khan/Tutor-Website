@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Math & Science Tutoring in Pakistan | Grades 8-12 | Professional Tutor</title>
+    <meta name="description" content="Professional home tutoring for Pakistani students. Expert tutor specializing in Mathematics, Physics, and Chemistry for grades 8-12, FBISE & Cambridge boards.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FF6B35; /* Vibrant orange */
+            --primary-dark: #E55A2B;
+            --primary-light: #FFF3EF;
+            --secondary: #1A1A1A; /* Deep black */
+            --secondary-light: #333333;
+            --accent: #FF8B5A;
+            --light: #FFFFFF;
+            --light-gray: #F8F9FA;
+            --medium-gray: #E9ECEF;
+            --dark-gray: #6C757D;
+            --text-dark: #212529;
+            --text-light: #495057;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --border-radius: 10px;
+            --border-radius-lg: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            margin-bottom: 16px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-3px);
+        }
+
+        .btn-sm {
+            padding: 12px 24px;
+            font-size: 0.9rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            padding: 20px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: var(--secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 0;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Hero Section - Centered */
+        .hero {
+            padding: 180px 0 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--light);
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--primary-light) 0%, transparent 100%);
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            margin-bottom: 24px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: var(--text-light);
+        }
+
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--light);
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--medium-gray);
+            transition: var(--transition);
+        }
+
+        .badge:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-light);
+        }
+
+        .badge i {
+            color: var(--primary);
+        }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        /* Services/Qualification Section */
+        .services {
+            background-color: var(--light-gray);
+            position: relative;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--light);
+            border-radius: var(--border-radius-lg);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-light), white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 1.8rem;
+            color: var(--primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-card h3 {
+            margin-bottom: 16px;
+        }
+
+        .service-card ul {
+            list-style: none;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .service-card li {
+            padding: 8px 0;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 28px;
+        }
+
+        .service-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* About/Education Section */
+        .about {
+            background-color: var(--light);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            margin-bottom: 24px;
+        }
+
+        .about-visual {
+            background-color: var(--light);
+            border-radius: var(--border-radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--medium-gray);
+        }
+
+        .education-item {
+            padding: 24px;
+            border-bottom: 1px solid var(--medium-gray);
+            position: relative;
+            padding-left: 70px;
+        }
+
+        .education-item:last-child {
+            border-bottom: none;
+        }
+
+        .education-item::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 28px;
+            width: 12px;
+            height: 12px;
+            background-color: var(--primary);
+            border-radius: 50%;
+        }
+
+        .education-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .education-item p {
+            margin-bottom: 8px;
+            color: var(--dark-gray);
+        }
+
+        .education-date {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Packages Section */
+        .packages {
+            background-color: var(--light-gray);
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .package-card {
+            background-color: var(--light);
+            border-radius: var(--border-radius-lg);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            position: relative;
+            border: 1px solid transparent;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .package-card.popular {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .package-card.popular:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .package-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-light), white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2rem;
+            color: var(--primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .package-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--secondary);
+            margin: 24px 0;
+        }
+
+        .package-price span {
+            font-size: 1rem;
+            color: var(--dark-gray);
+        }
+
+        .package-features {
+            list-style: none;
+            margin: 32px 0;
+            text-align: left;
+        }
+
+        .package-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--medium-gray);
+            color: var(--text-dark);
+            position: relative;
+            padding-left: 36px;
+        }
+
+        .package-features li:last-child {
+            border-bottom: none;
+        }
+
+        .package-features i {
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            top: 12px;
+            font-size: 1.1rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--light);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: var(--light);
+            border-radius: var(--border-radius-lg);
+            padding: 32px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid var(--medium-gray);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 24px;
+            position: relative;
+            padding-left: 24px;
+        }
+
+        .testimonial-text::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -10px;
+            font-size: 3rem;
+            color: var(--primary-light);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .author-avatar {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.3rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .author-info h4 {
+            margin-bottom: 4px;
+            font-size: 1.1rem;
+        }
+
+        .author-info p {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo {
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .footer-logo span {
+            color: var(--primary);
+        }
+
+        .footer-column p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 24px;
+        }
+
+        .footer-links h3 {
+            color: white;
+            margin-bottom: 24px;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .footer-links h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .footer-links i {
+            color: var(--primary);
+            width: 20px;
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-contact i {
+            color: var(--primary);
+            width: 20px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .about-content {
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background-color: var(--light);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 100px 30px 30px;
+                box-shadow: var(--shadow-lg);
+                transition: var(--transition);
+                z-index: 1000;
+            }
+            
+            nav.active {
+                right: 0;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 0;
+                width: 100%;
+            }
+            
+            .nav-links li {
+                width: 100%;
+                border-bottom: 1px solid var(--medium-gray);
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 16px 0;
+                width: 100%;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .section-padding {
+                padding: 80px 0;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .package-card.popular {
+                transform: scale(1);
+            }
+            
+            .package-card.popular:hover {
+                transform: translateY(-10px);
+            }
+            
+            .hero-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-cta .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-padding {
+                padding: 60px 0;
+            }
+            
+            .service-card, .package-card, .testimonial-card {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 1.9rem;
+            }
+            
+            .badge {
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+            
+            .education-item {
+                padding-left: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <span>Edu</span>Pro
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section - Centered -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Expert <span class="text-gradient">Math & Science</span> Tutoring</h1>
+                <p>Professional home tutoring for Pakistani students in grades 8-12. Specializing in Mathematics, Physics, and Chemistry for FBISE, Cambridge & Aga Khan boards.</p>
+                
+                <div class="hero-badges">
+                    <div class="badge">
+                        <i class="fas fa-award"></i>
+                        <span>12+ Years Experience</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>M.Sc. Physics</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-chart-line"></i>
+                        <span>92% Success Rate</span>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="https://wa.me/923001234567?text=Hello!%20I'm%20interested%20in%20tutoring%20for%20my%20child." class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp Now
+                    </a>
+                    <a href="tel:+923001234567" class="btn btn-secondary">
+                        <i class="fas fa-phone"></i>
+                        Call +92 300 1234567
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Specialized Tutoring Services</h2>
+                <p>Focused on helping Pakistani students excel in these key areas</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Subjects I Teach</h3>
+                    <ul>
+                        <li>Mathematics (All levels)</li>
+                        <li>Physics (9th to 12th)</li>
+                        <li>Chemistry (9th to 12th)</li>
+                        <li>Science (8th to 10th)</li>
+                        <li>O-Levels Mathematics</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Class Levels</h3>
+                    <ul>
+                        <li>Grade 8 (All boards)</li>
+                        <li>Matric (FBISE, AKU-EB)</li>
+                        <li>F.Sc Pre-Engineering</li>
+                        <li>O-Levels & A-Levels</li>
+                        <li>Board Exam Preparation</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Serving Areas</h3>
+                    <ul>
+                        <li>Islamabad: F-Series, G-Series</li>
+                        <li>Rawalpindi: Bahria, DHA</li>
+                        <li>Karachi: DHA, Clifton</li>
+                        <li>Lahore: Gulberg, DHA</li>
+                        <li>Online Classes Available</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Education Section -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Education & Credentials</h2>
+                <p>Academic background and professional development in Pakistan</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Qualifications & Teaching Philosophy</h2>
+                    <p>I believe in the power of education to transform lives, which is why I've dedicated myself to both teaching and continuous learning throughout my career in Pakistan's education system.</p>
+                    <p>My academic background in Physics provides a strong foundation for teaching science and mathematics with depth and clarity, tailored to Pakistani examination patterns and learning styles.</p>
+                    <p>I focus on building strong conceptual foundations rather than rote memorization, ensuring students develop problem-solving skills that serve them well beyond examinations.</p>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="education-item">
+                        <h3>M.Sc. in Physics</h3>
+                        <p>Quaid-e-Azam University, Islamabad</p>
+                        <span class="education-date">2010-2012</span>
+                    </div>
+                    
+                    <div class="education-item">
+                        <h3>B.Sc. in Physics</h3>
+                        <p>University of the Punjab, Lahore</p>
+                        <span class="education-date">2006-2010</span>
+                    </div>
+                    
+                    <div class="education-item">
+                        <h3>Teaching Certification</h3>
+                        <p>Diploma in Education (D.Ed.)</p>
+                        <span class="education-date">2012</span>
+                    </div>
+                    
+                    <div class="education-item">
+                        <h3>Continuous Development</h3>
+                        <p>Annual workshops on Pakistani curriculum updates</p>
+                        <span class="education-date">Ongoing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="packages section-padding" id="packages">
+        <div class="container">
+            <div class="section-title">
+                <h2>Flexible Tutoring Packages</h2>
+                <p>Choose a plan that fits your child's needs and schedule</p>
+            </div>
+            
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3>Basic Plan</h3>
+                    <p>For concept reinforcement</p>
+                    <div class="package-price">PKR 6,000<span>/month</span></div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> 8 sessions per month</li>
+                        <li><i class="fas fa-check"></i> 1 subject focus</li>
+                        <li><i class="fas fa-check"></i> Weekly progress reports</li>
+                        <li><i class="fas fa-check"></i> Practice worksheets</li>
+                        <li><i class="fas fa-check"></i> Doubt solving via WhatsApp</li>
+                    </ul>
+                    <a href="https://wa.me/923001234567?text=Hello!%20I'm%20interested%20in%20the%20Basic%20Plan%20for%20tutoring." class="btn btn-secondary">Choose Plan</a>
+                </div>
+                
+                <div class="package-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="package-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Standard Plan</h3>
+                    <p>Comprehensive academic support</p>
+                    <div class="package-price">PKR 10,000<span>/month</span></div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> 12 sessions per month</li>
+                        <li><i class="fas fa-check"></i> 2 subjects focus</li>
+                        <li><i class="fas fa-check"></i> Bi-weekly assessments</li>
+                        <li><i class="fas fa-check"></i> Customized study plan</li>
+                        <li><i class="fas fa-check"></i> Exam strategy sessions</li>
+                        <li><i class="fas fa-check"></i> Priority WhatsApp support</li>
+                    </ul>
+                    <a href="https://wa.me/923001234567?text=Hello!%20I'm%20interested%20in%20the%20Standard%20Plan%20for%20tutoring." class="btn btn-primary">Choose Plan</a>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Premium Plan</h3>
+                    <p>Complete academic transformation</p>
+                    <div class="package-price">PKR 15,000<span>/month</span></div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> 16 sessions per month</li>
+                        <li><i class="fas fa-check"></i> 3 subjects focus</li>
+                        <li><i class="fas fa-check"></i> Weekly assessments & reviews</li>
+                        <li><i class="fas fa-check"></i> Personalized roadmap</li>
+                        <li><i class="fas fa-check"></i> Parent-teacher meetings</li>
+                        <li><i class="fas fa-check"></i> Mock board exams</li>
+                        <li><i class="fas fa-check"></i> 24/7 doubt support</li>
+                    </ul>
+                    <a href="https://wa.me/923001234567?text=Hello!%20I'm%20interested%20in%20the%20Premium%20Plan%20for%20tutoring." class="btn btn-secondary">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section-padding" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Students & Parents Say</h2>
+                <p>Feedback from families I've worked with across Pakistan</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        My son's physics grade improved from 65% to 92% in just 4 months. The conceptual clarity he gained was remarkable. Sir's teaching style is perfectly aligned with FBISE requirements.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AA</div>
+                        <div class="author-info">
+                            <h4>Ahmed Ali</h4>
+                            <p>Parent of 11th Grade Student, Islamabad</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        After struggling with chemistry for months, just 8 sessions made everything click. I finally understand organic chemistry! Sir explains complex topics in such simple terms.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">FS</div>
+                        <div class="author-info">
+                            <h4>Fatima Shah</h4>
+                            <p>12th Grade Student, Karachi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        We tried two tutors before finding the right fit. The personalized approach and regular progress updates made all the difference. My daughter's confidence in mathematics has grown tremendously.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SK</div>
+                        <div class="author-info">
+                            <h4>Sara Khan</h4>
+                            <p>Parent of 10th Grade Student, Lahore</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Edu</span>Pro
+                    </div>
+                    <p>Professional home tutoring for Pakistani students across FBISE, Cambridge & Aga Khan boards. Specializing in Mathematics, Physics, and Chemistry for grades 8-12.</p>
+                    <div style="margin-top: 30px;">
+                        <a href="https://wa.me/923001234567?text=Hello!%20I'm%20interested%20in%20tutoring%20for%20my%20child." class="btn btn-primary btn-sm">
+                            <i class="fab fa-whatsapp"></i>
+                            Start Learning Today
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="#packages"><i class="fas fa-chevron-right"></i> Packages</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +92 300 1234567</li>
+                        <li><i class="fas fa-envelope"></i> info@edupro.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Serving: Islamabad, Karachi, Lahore</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 9AM - 8PM</li>
+                        <li><i class="fas fa-globe"></i> Online Classes Available</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 EduPro Tutoring. All rights reserved. | Serving Students Across Pakistan
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mainNav = document.getElementById('main-nav');
+        const navLinks = document.querySelectorAll('.nav-links a');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            
+            // Update menu icon
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mainNav.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                
+                // Update active class
+                navLinks.forEach(item => item.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
+                header.style.padding = '15px 0';
+            } else {
+                header.style.boxShadow = 'var(--shadow-sm)';
+                header.style.padding = '20px 0';
+            }
+            
+            // Update active nav link based on scroll position
+            const sections = document.querySelectorAll('section');
+            const navLi = document.querySelectorAll('.nav-links a');
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLi.forEach(li => {
+                li.classList.remove('active');
+                if (li.getAttribute('href').substring(1) === current) {
+                    li.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Card hover effects
+        document.querySelectorAll('.service-card, .package-card, .testimonial-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                
+                // For popular package card, maintain scale
+                if (card.classList.contains('popular')) {
+                    card.style.transform = 'scale(1.05)';
+                }
+            });
+        });
+        
+        // Badge hover effects
+        document.querySelectorAll('.badge').forEach(badge => {
+            badge.addEventListener('mouseenter', () => {
+                badge.style.transform = 'translateY(-5px)';
+            });
+            
+            badge.addEventListener('mouseleave', () => {
+                badge.style.transform = 'translateY(0)';
+            });
+        });
+        
+        // Button click animation
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>
