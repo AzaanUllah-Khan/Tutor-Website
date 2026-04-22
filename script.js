@@ -1,4 +1,4 @@
-// Mobile Navigation
+
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mainNav = document.getElementById('main-nav');
 const navLinks = document.querySelectorAll('.nav-links a');
